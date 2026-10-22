@@ -1,0 +1,257 @@
+// Popup Menus & Submenus
+
+.popup-menu-content {
+  padding: 8px;
+  border-radius: $radius-menu;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+}
+
+.popup-menu-item {
+  border-radius: $radius-button;
+  padding: 6px 12px;
+  margin: 2px 4px;
+  transition-duration: $duration-standard;
+  color: $fg-color;
+
+  &:hover,
+  &:focus {
+    background-color: $card-hover;
+    color: $fg-color;
+  }
+
+  &:active {
+    background-color: $card-active;
+  }
+
+  &:checked {
+    color: $accent-color;
+    font-weight: 600;
+  }
+}
+
+.popup-separator-menu-item {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 3px 0 !important;
+
+  .popup-separator-menu-item-separator {
+    height: 1px;
+    margin: 3px 12px;
+    background-color: $separator-color !important;
+  }
+}
+
+.separator {
+  background-color: $separator-color !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.popup-sub-menu {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+
+  .popup-separator-menu-item {
+    background-color: transparent !important;
+
+    .popup-separator-menu-item-separator {
+      margin: 3px 16px;
+    }
+  }
+}
+
+// Popover containers
+.datemenu-popover {
+  border-radius: 26px;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+
+  .separator {
+    width: 1px;
+    background-color: $separator-color !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 6px 12px;
+  }
+}
+
+// Calendar & Date Menu
+.datemenu-calendar-column {
+  spacing: 10px;
+}
+
+.datemenu-today-button {
+  padding: 8px 14px;
+  border-radius: $radius-card;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  .date-label {
+    font-weight: 800;
+    font-size: 1.35em;
+    color: $fg-color;
+  }
+
+  .day-label {
+    font-weight: 600;
+    color: $fg-dim;
+  }
+
+  &:hover {
+    background-color: $card-hover !important;
+  }
+
+  &:active {
+    background-color: $card-active !important;
+  }
+}
+
+.calendar {
+  padding: 6px;
+  border-radius: $radius-card;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  .calendar-month-header {
+    font-weight: 700;
+    color: $fg-color;
+    margin-bottom: 6px;
+
+    .calendar-month-label {
+      background-color: transparent !important;
+      color: $fg-color !important;
+      font-weight: 700;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 6px 12px;
+    }
+
+    .pager-button {
+      border-radius: $radius-pill;
+      padding: 6px;
+      background-color: transparent !important;
+      color: $fg-color !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition-duration: $duration-standard;
+
+      &:hover {
+        background-color: $card-hover !important;
+      }
+
+      &:active {
+        background-color: $card-active !important;
+      }
+    }
+  }
+
+  .calendar-day-heading {
+    font-weight: 600;
+    color: $fg-dim !important;
+    font-size: 0.85em;
+    text-align: center;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 2px;
+    padding: 2px 4px;
+  }
+
+  .calendar-day {
+    border-radius: $radius-pill;
+    margin: 2px;
+    transition-duration: $duration-standard;
+    color: $fg-color !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: center;
+
+    &:hover {
+      background-color: $card-hover !important;
+      color: $fg-color !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+
+    &.calendar-weekend {
+      color: $fg-dim !important;
+      background-color: transparent !important;
+    }
+
+    &.calendar-other-month {
+      color: rgba($fg-color, 0.35) !important;
+      font-weight: 400;
+      background-color: transparent !important;
+    }
+
+    &.calendar-today {
+      background-color: $accent-color !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      box-shadow: none !important;
+      border: none !important;
+
+      &:hover {
+        background-color: $accent-hover !important;
+      }
+    }
+
+    &.selected {
+      background-color: rgba($accent-color, 0.22) !important;
+      border: 1px solid $accent-color !important;
+    }
+  }
+}
+
+.world-clocks-button,
+.weather-button,
+.events-button {
+  border-radius: $radius-card;
+  background-color: $card-bg;
+  border: 1px solid $surface-border;
+  padding: 10px;
+
+  &:hover {
+    background-color: $card-hover;
+  }
+}
+
+// ==========================================
+// Liquid Glass Menu Support
+// ==========================================
+.liquid-glass-transparent {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.datemenu-popover.liquid-glass-transparent,
+.popup-menu-content.liquid-glass-transparent,
+.quick-settings.liquid-glass-transparent,
+.dock-app-menu.liquid-glass-transparent,
+.app-menu.liquid-glass-transparent,
+.liquid-glass-transparent .datemenu-popover,
+.liquid-glass-transparent .popup-menu-content,
+.liquid-glass-transparent .quick-settings,
+.liquid-glass-transparent .dock-app-menu,
+.liquid-glass-transparent .app-menu,
+.liquid-glass-menu-root,
+.liquid-glass-qs-root {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+

@@ -1,0 +1,117 @@
+// Modal Dialogs & Prompts
+
+.modal-dialog {
+  border-radius: $radius-dialog;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+  padding: 24px;
+  color: $fg-color;
+
+  .modal-dialog-content-box {
+    spacing: 20px;
+    margin: 12px;
+  }
+
+  // Dialog Action Buttons - kept on a single horizontal line
+  .modal-dialog-button-box {
+    spacing: 12px;
+    padding-top: 16px;
+
+    .button {
+      border-radius: $radius-button;
+      padding: 8px 18px;
+      font-weight: 600;
+      min-height: 28px;
+      transition-duration: $duration-standard;
+      color: $fg-color;
+      background-color: $card-bg;
+
+      &:hover {
+        background-color: $card-hover;
+      }
+
+      &:active {
+        background-color: $card-active;
+      }
+
+      &:focus {
+        @include focus-ring($accent-color);
+      }
+
+      &.default {
+        background-color: $accent-color;
+        color: #ffffff;
+
+        &:hover {
+          background-color: $accent-hover;
+        }
+
+        &:active {
+          background-color: $accent-active;
+        }
+      }
+    }
+  }
+}
+
+// Run Command Dialog (Alt+F2)
+.run-dialog {
+  border-radius: $radius-dialog;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+  padding: 16px 20px;
+  min-width: 380px;
+
+  .run-dialog-entry {
+    font-size: 1.1em;
+    padding: 10px 14px;
+    border-radius: $radius-input;
+    background-color: $card-bg;
+    color: $fg-color;
+    border: 1px solid $surface-border;
+
+    &:focus {
+      @include focus-ring($accent-color);
+    }
+  }
+
+  .run-dialog-description {
+    font-size: 0.9em;
+    color: $fg-dim;
+    text-align: center;
+  }
+}
+
+// Authentication & Password Prompts
+.prompt-dialog-password-entry {
+  border-radius: $radius-input;
+  background-color: $card-bg;
+  color: $fg-color;
+  padding: 10px 14px;
+
+  &:focus {
+    @include focus-ring($accent-color);
+  }
+}
+
+// Alt+Tab Window Switcher Popup
+.switcher-list {
+  border-radius: $radius-dialog;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+  padding: 16px;
+
+  .item-box {
+    border-radius: $radius-card;
+    padding: 10px;
+    transition-duration: $duration-standard;
+
+    &:selected {
+      background-color: $card-active;
+      color: $fg-color;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "variables";
+
+// Dark Glass Theme mapping
+$panel-bg: $dark-panel-bg;
+$panel-border: $dark-panel-border;
+$surface-bg: $dark-surface-bg;
+$surface-border: $dark-surface-border;
+$card-bg: $dark-card-bg;
+$card-hover: $dark-card-hover;
+$card-active: $dark-card-active;
+$notification-bg: $dark-notification-bg;
+$notification-hover: $dark-notification-hover;
+$notification-second: $dark-notification-second;
+$notification-lower: $dark-notification-lower;
+$fg-color: $dark-fg;
+$fg-dim: $dark-fg-dim;
+$shadow: $dark-shadow;
+$dock-bg: $dark-dock-bg;
+$dock-border: $dark-dock-border;
+$dock-top-border: $dark-dock-top-border;
+$dock-dot-color: $dark-dock-dot;
+$separator-color: $dark-separator-color;
+
+@import "common";
+@import "panel";
+@import "quick_settings";
+@import "menus";
+@import "dash";
+@import "notifications";
+@import "dialogs";
+@import "overview";

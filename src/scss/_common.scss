@@ -1,0 +1,63 @@
+@mixin focus-ring($color: $accent-color) {
+  box-shadow: inset 0 0 0 2px $color !important;
+}
+
+@mixin glass-card($bg, $border, $shadow, $highlight) {
+  background-color: $bg;
+  border: 1px solid $border;
+  box-shadow: $shadow, $highlight;
+}
+
+// Stage & Global definitions
+stage {
+  -st-accent-color: #{$accent-color};
+  -st-accent-color-hover: #{$accent-hover};
+  -st-accent-color-active: #{$accent-active};
+}
+
+// Scrollbars
+StScrollView {
+  &.vfade {
+    -st-vfade-offset: 48px;
+  }
+  &.hfade {
+    -st-hfade-offset: 48px;
+  }
+}
+
+StScrollBar {
+  padding: 4px;
+
+  StButton#vhandle,
+  StButton#hhandle {
+    border-radius: $radius-pill;
+    background-color: rgba(255, 255, 255, 0.22);
+    margin: 3px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.38);
+    }
+
+    &:active {
+      background-color: $accent-color;
+    }
+  }
+}
+
+// Universal Input Entries
+StEntry {
+  border-radius: $radius-input;
+  padding: 8px 12px;
+  transition-duration: $duration-standard;
+  border: 1px solid transparent;
+
+  &:focus {
+    @include focus-ring($accent-color);
+  }
+
+  .caps-lock-warning {
+    icon-size: 16px;
+    warning-color: $accent-color;
+    padding: 0 4px;
+  }
+}

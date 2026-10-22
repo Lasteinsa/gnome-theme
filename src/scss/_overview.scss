@@ -1,0 +1,86 @@
+// Overview, Search, App Grid, and Window Switcher
+
+#overview {
+  background-color: transparent !important;
+
+  // Search Entry
+  #searchEntry {
+    border-radius: $radius-input;
+    background-color: $surface-bg;
+    border: 1px solid $surface-border;
+    box-shadow: $shadow;
+    color: $fg-color;
+    padding: 10px 16px;
+    font-size: 1.1em;
+    min-width: 320px;
+    transition-duration: $duration-standard;
+
+    &:focus {
+      @include focus-ring($accent-color);
+      border-color: $accent-color;
+    }
+
+    .search-entry-icon {
+      icon-size: 18px;
+      color: $fg-dim;
+    }
+  }
+
+  // Search Results
+  .search-section {
+    .list-search-result {
+      border-radius: $radius-card;
+      padding: 8px 12px;
+      transition-duration: $duration-standard;
+      color: $fg-color;
+
+      &:hover,
+      &:focus {
+        background-color: $card-hover;
+      }
+
+      &:active {
+        background-color: $card-active;
+      }
+    }
+  }
+
+  // App Folders
+  .app-folder-dialog {
+    border-radius: $radius-dialog;
+    background-color: $surface-bg;
+    border: 1px solid $surface-border;
+    box-shadow: $shadow;
+    padding: 20px;
+
+    .app-folder-icon {
+      border-radius: $radius-card;
+    }
+  }
+
+  // Workspace Thumbnails
+  .workspace-thumbnails {
+    .workspace-thumbnail {
+      border-radius: $radius-card;
+      border: 1px solid $surface-border;
+
+      &.active {
+        border: 2px solid $accent-color;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  // Window Close Button
+  .window-close {
+    border-radius: $radius-pill;
+    background-color: rgba(20, 20, 24, 0.75);
+    color: #ffffff;
+    transition-duration: $duration-standard;
+
+    &:hover {
+      background-color: $accent-color;
+      box-shadow: none !important;
+    }
+  }
+}

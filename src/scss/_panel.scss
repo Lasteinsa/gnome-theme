@@ -1,0 +1,125 @@
+#panel {
+  background-color: $panel-bg;
+  font-weight: bold;
+  height: 2.2em;
+  border: none !important;
+  box-shadow: none !important;
+  transition-duration: 250ms;
+
+  .panel-button {
+    transition-duration: 150ms;
+    border: none !important;
+    background-color: transparent;
+    border-radius: 999px;
+    font-weight: bold;
+    color: $fg-color;
+    box-shadow: none !important;
+    -natural-hpadding: 12px;
+    -minimum-hpadding: 6px;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.14) !important;
+      box-shadow: none !important;
+      border: none !important;
+      color: $fg-color;
+    }
+
+    &:active,
+    &:checked {
+      background-color: rgba(255, 255, 255, 0.22) !important;
+      box-shadow: none !important;
+      border: none !important;
+      color: $fg-color;
+    }
+
+    .system-status-icon {
+      icon-size: 1.091em;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+
+    .panel-status-indicators-box {
+      spacing: 4px;
+
+      > .system-status-icon {
+        padding: 0;
+      }
+    }
+
+    // Activities workspace indicator dots
+    &#panelActivities {
+      StBoxLayout {
+        padding: 0 0.2045em;
+        spacing: 5px;
+      }
+
+      .workspace-dot {
+        border-radius: 999px;
+        min-width: 0.5455em;
+        min-height: 0.5455em;
+        background-color: $fg-dim;
+        transition-duration: 150ms;
+
+        &.active {
+          min-width: 1.2em;
+          background-color: $accent-color;
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    // Clock display (completely borderless and shadowless, smooth pure pill)
+    &.clock-display {
+      background: none !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+
+      .clock {
+        transition-duration: 150ms;
+        border: none !important;
+        border-radius: 999px;
+        box-shadow: none !important;
+      }
+
+      &:hover .clock,
+      &:focus .clock {
+        background-color: rgba(255, 255, 255, 0.14) !important;
+        box-shadow: none !important;
+        border: none !important;
+        color: $fg-color;
+      }
+
+      &:active .clock,
+      &:checked .clock {
+        background-color: rgba(255, 255, 255, 0.22) !important;
+        box-shadow: none !important;
+        border: none !important;
+        color: $fg-color;
+      }
+    }
+
+    // Screen recording pill
+    &.screen-recording-indicator {
+      background-color: $accent-color !important;
+      box-shadow: none !important;
+      border: none !important;
+      color: #ffffff;
+      border-radius: 999px;
+
+      &:hover {
+        background-color: $accent-hover !important;
+      }
+    }
+  }
+
+  // Transparent in overview and lock screen
+  &:overview,
+  &.unlock-screen,
+  &.login-screen {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

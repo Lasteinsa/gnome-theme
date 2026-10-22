@@ -1,0 +1,326 @@
+// Quick Settings Menu & Grid
+
+.quick-settings {
+  padding: 16px;
+  border-radius: 24px;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+
+  .icon-button,
+  .button {
+    border-radius: $radius-button;
+    transition-duration: $duration-standard;
+    color: $fg-color;
+
+    &:hover {
+      background-color: $card-hover;
+    }
+
+    &:active {
+      background-color: $card-active;
+    }
+  }
+}
+
+// System top row: battery toggle on left, circle action buttons on right
+.quick-settings-system-item {
+  > StBoxLayout {
+    spacing: 12px;
+  }
+
+  .power-item {
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+    border-radius: $radius-card !important;
+    padding: 6px 14px;
+    font-weight: 600;
+    transition-duration: $duration-standard;
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+
+    StIcon {
+      color: $fg-color !important;
+    }
+  }
+
+  .icon-button {
+    border-radius: $radius-pill !important;
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+    padding: 8px;
+    transition-duration: $duration-standard;
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+
+    StIcon {
+      color: $fg-color !important;
+    }
+  }
+}
+
+.quick-settings-grid {
+  spacing-rows: 10px;
+  spacing-columns: 10px;
+}
+
+// Standalone Quick Toggle (no submenu)
+.quick-toggle {
+  border-radius: $radius-card;
+  transition-duration: $duration-standard;
+  background-color: $card-bg !important;
+  color: $fg-color !important;
+  border: 1px solid $surface-border !important;
+
+  &:hover {
+    background-color: $card-hover !important;
+  }
+
+  &:active {
+    background-color: $card-active !important;
+  }
+
+  &:checked {
+    background-color: $accent-color !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background-color: $accent-hover !important;
+    }
+
+    &:active {
+      background-color: $accent-active !important;
+    }
+
+    .quick-toggle-title,
+    .quick-toggle-subtitle,
+    .quick-toggle-icon,
+    StIcon {
+      color: #ffffff !important;
+    }
+  }
+
+  .quick-toggle-title {
+    font-weight: 600;
+    color: $fg-color !important;
+  }
+
+  .quick-toggle-subtitle {
+    font-size: 0.85em;
+    opacity: 0.75;
+    color: $fg-dim !important;
+  }
+
+  .quick-toggle-icon,
+  StIcon {
+    color: $fg-color !important;
+  }
+}
+
+// Split Quick Toggle with Submenu (Wi-Fi, Bluetooth)
+.quick-toggle-has-menu {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  .quick-toggle {
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+
+    &:ltr {
+      border-radius: $radius-card 0 0 $radius-card;
+      border-right: none !important;
+    }
+
+    &:rtl {
+      border-radius: 0 $radius-card $radius-card 0;
+      border-left: none !important;
+    }
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+
+    &:checked {
+      background-color: $accent-color !important;
+      color: #ffffff !important;
+      border-color: transparent !important;
+
+      &:hover {
+        background-color: $accent-hover !important;
+      }
+
+      &:active {
+        background-color: $accent-active !important;
+      }
+
+      .quick-toggle-title,
+      .quick-toggle-subtitle,
+      .quick-toggle-icon,
+      StIcon {
+        color: #ffffff !important;
+      }
+    }
+
+    .quick-toggle-title {
+      font-weight: 600;
+      color: $fg-color !important;
+    }
+
+    .quick-toggle-subtitle {
+      font-size: 0.85em;
+      opacity: 0.75;
+      color: $fg-dim !important;
+    }
+
+    .quick-toggle-icon,
+    StIcon {
+      color: $fg-color !important;
+    }
+  }
+
+  // The vertical divider separator between toggle and menu button
+  .quick-toggle-separator {
+    width: 1px !important;
+    background-color: $separator-color !important;
+    margin: 6px 0 !important;
+    padding: 0 !important;
+  }
+
+  &:checked .quick-toggle-separator,
+  .quick-toggle:checked + .quick-toggle-separator {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  // Right-side chevron menu arrow button
+  .quick-toggle-menu-button {
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+    transition-duration: $duration-standard;
+    padding: 0.409em 0.71575em;
+
+    &:ltr {
+      border-radius: 0 $radius-card $radius-card 0;
+      border-left: none !important;
+    }
+
+    &:rtl {
+      border-radius: $radius-card 0 0 $radius-card;
+      border-right: none !important;
+    }
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+
+    &:checked {
+      background-color: $accent-color !important;
+      color: #ffffff !important;
+      border-color: transparent !important;
+
+      &:hover {
+        background-color: $accent-hover !important;
+      }
+
+      &:active {
+        background-color: $accent-active !important;
+      }
+
+      StIcon {
+        color: #ffffff !important;
+      }
+    }
+
+    StIcon {
+      color: $fg-color !important;
+    }
+  }
+}
+
+// Quick Toggle Submenu (Wi-Fi / Bluetooth dropdown card)
+.quick-toggle-menu {
+  border-radius: $radius-menu;
+  margin: 10px 0 0;
+  background-color: $surface-bg !important;
+  border: 1px solid $surface-border !important;
+  box-shadow: $shadow;
+
+  .header {
+    .title {
+      font-weight: 700;
+      color: $fg-color;
+    }
+  }
+}
+
+// Sliders (Volume, Brightness)
+.quick-slider {
+  > StBoxLayout {
+    spacing: 8px;
+  }
+
+  .icon-button {
+    border-radius: $radius-pill !important;
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+    padding: 6px;
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    StIcon {
+      color: $fg-color !important;
+    }
+  }
+
+  .slider-bin {
+    padding: 6px;
+    border-radius: $radius-pill;
+
+    &:focus {
+      @include focus-ring($accent-color);
+    }
+  }
+}
+
+.slider {
+  -barlevel-height: 8px;
+  -barlevel-background-color: rgba(255, 255, 255, 0.15);
+  -barlevel-active-background-color: #{$accent-color};
+  -barlevel-overdrive-color: #FF334B;
+  -slider-handle-radius: 9px;
+  color: $fg-color;
+  transition-duration: $duration-standard;
+
+  &:hover {
+    -barlevel-active-background-color: #{$accent-hover};
+  }
+}

@@ -1,0 +1,509 @@
+// ==========================================
+// Native Overview Dash
+// ==========================================
+#overview #dash,
+#overviewGroup #dash {
+  .dash-background {
+    background-color: $dock-bg !important;
+    border: 1px solid $dock-border !important;
+    border-top: 1px solid $dock-top-border !important;
+    border-radius: 18px !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38) !important;
+    padding: 10px 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .dash-item-container {
+    .app-well-app,
+    .show-apps,
+    .overview-tile {
+      background: none !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 6px !important;
+      margin: 0 !important;
+      transition-duration: $duration-standard;
+
+      .overview-icon {
+        background: none !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transition-duration: $duration-standard;
+      }
+
+      &:hover,
+      &:focus,
+      &.focused,
+      &:active,
+      &:checked,
+      &.selected {
+        background: none !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+
+        .overview-icon {
+          background: none !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    .overview-tile:hover .overview-icon,
+    .overview-tile.focused .overview-icon,
+    .overview-tile:active .overview-icon,
+    .overview-tile:checked .overview-icon,
+    .show-apps:hover .overview-icon,
+    .show-apps.focused .overview-icon,
+    .show-apps:active .overview-icon,
+    .show-apps:checked .overview-icon,
+    .app-well-app:hover .overview-icon,
+    .app-well-app.focused .overview-icon,
+    .app-well-app:active .overview-icon,
+    .app-well-app:checked .overview-icon {
+      background: none !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .show-apps {
+    .overview-icon {
+      background: none !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    StIcon,
+    .show-apps-icon {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  .app-well-app-running-dot,
+  .app-grid-running-dot {
+    width: 4px !important;
+    height: 4px !important;
+    min-width: 4px !important;
+    min-height: 4px !important;
+    border-radius: 9999px !important;
+    background-color: $dock-dot-color !important;
+    margin: 0 !important;
+    margin-top: 2px !important;
+    margin-bottom: 0px !important;
+    offset-y: 0px !important;
+  }
+
+  .dash-separator {
+    width: 1px !important;
+    min-width: 1px !important;
+    height: 24px !important;
+    margin: 0 6px !important;
+    background-color: $separator-color !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// ==========================================
+// Dash to Dock Extension Styling
+// ==========================================
+.liquid-glass-transparent {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#dashtodockDashContainer.liquid-glass-transparent,
+.liquid-glass-transparent #dashtodockContainer,
+.liquid-glass-transparent .dash-background,
+.dash-background.liquid-glass-transparent,
+#dashtodockContainer {
+  &.liquid-glass-transparent,
+  .liquid-glass-transparent {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  &.liquid-glass-transparent #dash,
+  #dash.liquid-glass-transparent,
+  &.liquid-glass-transparent .dash-background,
+  #dash.liquid-glass-transparent .dash-background,
+  .dash-background.liquid-glass-transparent {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  #dash {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    .dash-background {
+      background-color: $dock-bg !important;
+      border: 1px solid $dock-border !important;
+      border-top: 1px solid $dock-top-border !important;
+      border-radius: 18px !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+
+      &.liquid-glass-transparent {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+      }
+    }
+
+    .dash-separator {
+      width: 1px !important;
+      min-width: 1px !important;
+      max-width: 1px !important;
+      height: 20px !important;
+      min-height: 20px !important;
+      max-height: 20px !important;
+      margin: 12px 6px !important;
+      y-align: center !important;
+      background-color: rgba(255, 255, 255, 0.20) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      box-shadow: none !important;
+    }
+
+    #dashtodockDashContainer {
+      padding: 0 10px !important;
+      margin: 0 !important;
+    }
+
+    .dash-item-container {
+      margin: 0 2px !important;
+      padding: 0 !important;
+
+      .app-well-app,
+      .show-apps,
+      .overview-tile {
+        background: none !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        // Vertically balanced padding:
+        // Top padding (8px) above the icon.
+        // Bottom padding (13px) accommodates the 4px dot + 1px margin,
+        // leaving exactly 8px below the running dot.
+        padding: 8px 6px 13px 6px !important;
+        transition-duration: $duration-standard;
+
+        .overview-icon {
+          background: none !important;
+          background-color: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          transition-duration: $duration-standard;
+        }
+
+        &:hover,
+        &:focus,
+        &.focused,
+        &:active,
+        &:checked,
+        &.selected {
+          background: none !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+
+          .overview-icon {
+            background: none !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+          }
+        }
+      }
+
+      .overview-tile:hover .overview-icon,
+      .overview-tile.focused .overview-icon,
+      .overview-tile:active .overview-icon,
+      .overview-tile:checked .overview-icon,
+      .show-apps:hover .overview-icon,
+      .show-apps.focused .overview-icon,
+      .show-apps:active .overview-icon,
+      .show-apps:checked .overview-icon,
+      .app-well-app:hover .overview-icon,
+      .app-well-app.focused .overview-icon,
+      .app-well-app:active .overview-icon,
+      .app-well-app:checked .overview-icon {
+        background: none !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+
+      .show-apps {
+        .overview-icon {
+          background: none !important;
+          background-color: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
+
+        StIcon,
+        .show-apps-icon {
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+      }
+
+      .app-well-app-running-dot,
+      .app-grid-running-dot {
+        width: 4px !important;
+        height: 4px !important;
+        min-width: 4px !important;
+        min-height: 4px !important;
+        border-radius: 9999px !important;
+        background-color: $dock-dot-color !important;
+        margin: 0 !important;
+        margin-top: 1px !important;
+        margin-bottom: 0px !important;
+        offset-y: 0px !important;
+      }
+    }
+  }
+
+  // Bottom Dock Specificity override
+  &.bottom #dash {
+    .dash-background {
+      margin: 0 !important;
+      border-radius: 18px !important;
+    }
+
+    .dash-separator {
+      width: 1px !important;
+      min-width: 1px !important;
+      max-width: 1px !important;
+      height: 20px !important;
+      min-height: 20px !important;
+      max-height: 20px !important;
+      margin: 12px 6px !important;
+      y-align: center !important;
+      background-color: rgba(255, 255, 255, 0.20) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      box-shadow: none !important;
+    }
+  }
+
+  // Top Dock Orientation
+  &.top #dash {
+    .dash-background {
+      margin: 0 !important;
+      border-radius: 18px !important;
+    }
+
+    .dash-separator {
+      width: 1px !important;
+      min-width: 1px !important;
+      max-width: 1px !important;
+      height: 20px !important;
+      min-height: 20px !important;
+      max-height: 20px !important;
+      margin: 12px 6px !important;
+      y-align: center !important;
+      background-color: rgba(255, 255, 255, 0.20) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      box-shadow: none !important;
+    }
+
+    .dash-item-container {
+      .app-well-app,
+      .show-apps,
+      .overview-tile {
+        padding: 13px 6px 8px 6px !important;
+      }
+
+      .app-well-app-running-dot,
+      .app-grid-running-dot {
+        margin-top: 0px !important;
+        margin-bottom: 1px !important;
+      }
+    }
+  }
+
+  // Left Dock Orientation
+  &.left #dash {
+    .dash-background {
+      margin: 0 !important;
+      border-radius: 18px !important;
+    }
+
+    .dash-separator {
+      width: 20px !important;
+      min-width: 20px !important;
+      max-width: 20px !important;
+      height: 1px !important;
+      min-height: 1px !important;
+      max-height: 1px !important;
+      margin: 6px 12px !important;
+      x-align: center !important;
+      background-color: rgba(255, 255, 255, 0.20) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      box-shadow: none !important;
+    }
+
+    .dash-item-container {
+      .app-well-app,
+      .show-apps,
+      .overview-tile {
+        padding: 6px 8px 6px 13px !important;
+      }
+    }
+  }
+
+  // Right Dock Orientation
+  &.right #dash {
+    .dash-background {
+      margin: 0 !important;
+      border-radius: 18px !important;
+    }
+
+    .dash-separator {
+      width: 20px !important;
+      min-width: 20px !important;
+      max-width: 20px !important;
+      height: 1px !important;
+      min-height: 1px !important;
+      max-height: 1px !important;
+      margin: 6px 12px !important;
+      x-align: center !important;
+      background-color: rgba(255, 255, 255, 0.20) !important;
+      border: none !important;
+      border-radius: 9999px !important;
+      box-shadow: none !important;
+    }
+
+    .dash-item-container {
+      .app-well-app,
+      .show-apps,
+      .overview-tile {
+        padding: 6px 13px 6px 8px !important;
+      }
+    }
+  }
+}
+
+// ==========================================
+// Top-Level Universal Dock Hover Neutralization
+// ==========================================
+.dash-item-container,
+#dash,
+#dashtodockContainer,
+#dashtodockDashContainer {
+  .app-well-app,
+  .show-apps,
+  .overview-tile,
+  StButton {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+
+    &:hover,
+    &:focus,
+    &.focused,
+    &:active,
+    &:checked,
+    &.selected {
+      background: none !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      box-shadow: none !important;
+
+      .overview-icon {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .overview-icon {
+      background: none !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .overview-tile:hover .overview-icon,
+  .overview-tile.focused .overview-icon,
+  .overview-tile:focus .overview-icon,
+  .overview-tile:active .overview-icon,
+  .overview-tile.running .overview-icon,
+  .overview-tile.running:hover .overview-icon,
+  .show-apps:hover .overview-icon,
+  .show-apps.focused .overview-icon,
+  .show-apps:focus .overview-icon,
+  .show-apps:active .overview-icon,
+  .app-well-app:hover .overview-icon,
+  .app-well-app.focused .overview-icon,
+  .app-well-app:focus .overview-icon,
+  .app-well-app:active .overview-icon,
+  .app-well-app.running .overview-icon,
+  .app-well-app.running:hover .overview-icon {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Flat selectors matching Dash to Dock stylesheet.css directly
+.dash-item-container .overview-tile:hover .overview-icon,
+.dash-item-container .overview-tile.focused .overview-icon,
+.dash-item-container .overview-tile:focus .overview-icon,
+.dash-item-container .overview-tile:active .overview-icon,
+.dash-item-container .show-apps:hover .overview-icon,
+.dash-item-container .show-apps.focused .overview-icon,
+.dash-item-container .show-apps:focus .overview-icon,
+.dash-item-container .show-apps:active .overview-icon,
+.dash-item-container .app-well-app:hover .overview-icon,
+.dash-item-container .app-well-app.focused .overview-icon,
+.dash-item-container .app-well-app:focus .overview-icon,
+.dash-item-container .app-well-app:active .overview-icon,
+.dash-item-container .overview-tile:hover,
+.dash-item-container .overview-tile.focused,
+.dash-item-container .show-apps:hover,
+.dash-item-container .show-apps.focused,
+.dash-item-container .app-well-app:hover,
+.dash-item-container .app-well-app.focused,
+.dash-item-container StButton:hover,
+.dash-item-container StButton.focused,
+.dash-item-container StButton:hover .overview-icon,
+.dash-item-container StButton.focused .overview-icon,
+.overview-tile:hover .overview-icon,
+.show-apps:hover .overview-icon,
+.app-well-app:hover .overview-icon,
+.overview-icon:hover {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}

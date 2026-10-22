@@ -1,0 +1,31 @@
+@import "variables";
+
+// Light Glass Theme mapping
+$panel-bg: $light-panel-bg;
+$panel-border: $light-panel-border;
+$surface-bg: $light-surface-bg;
+$surface-border: $light-surface-border;
+$card-bg: $light-card-bg;
+$card-hover: $light-card-hover;
+$card-active: $light-card-active;
+$notification-bg: $light-notification-bg;
+$notification-hover: $light-notification-hover;
+$notification-second: $light-notification-second;
+$notification-lower: $light-notification-lower;
+$fg-color: $light-fg;
+$fg-dim: $light-fg-dim;
+$shadow: $light-shadow;
+$dock-bg: $light-dock-bg;
+$dock-border: $light-dock-border;
+$dock-top-border: $light-dock-top-border;
+$dock-dot-color: $light-dock-dot;
+$separator-color: $light-separator-color;
+
+@import "common";
+@import "panel";
+@import "quick_settings";
+@import "menus";
+@import "dash";
+@import "notifications";
+@import "dialogs";
+@import "overview";

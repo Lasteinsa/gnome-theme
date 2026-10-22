@@ -1,0 +1,18 @@
+{
+  "uuid": "mf-theme@einsa",
+  "name": "MF Theme",
+  "description": "All-in-one frosted glass theme and effects for GNOME Shell with #FF5666 accent.",
+  "shell-version": [
+    "51",
+    "50",
+    "49",
+    "48",
+    "47",
+    "46",
+    "45"
+  ],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.mf-theme",
+  "gettext-domain": "mf-theme",
+  "url": "https://github.com/einsa/mf-gnome-theme"
+}

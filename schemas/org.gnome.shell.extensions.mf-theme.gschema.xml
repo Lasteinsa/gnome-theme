@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.mf-theme" path="/org/gnome/shell/extensions/mf-theme/">
+    <key name="blur-radius" type="i">
+      <default>26</default>
+      <summary>Frosted blur radius</summary>
+      <description>Radius for native Shell.BlurEffect shaders (in pixels).</description>
+    </key>
+    <key name="blur-brightness" type="d">
+      <default>0.92</default>
+      <summary>Frosted blur brightness</summary>
+      <description>Brightness multiplier for background blur shader.</description>
+    </key>
+    <key name="frosted-panel" type="b">
+      <default>true</default>
+      <summary>Enable panel frosted glass</summary>
+      <description>Applies frosted glass blur shader to the top bar panel.</description>
+    </key>
+    <key name="frosted-quick-settings" type="b">
+      <default>true</default>
+      <summary>Enable quick settings frosted glass</summary>
+      <description>Applies frosted glass blur shader to the quick settings menu.</description>
+    </key>
+    <key name="frosted-datemenu" type="b">
+      <default>true</default>
+      <summary>Enable calendar/datemenu frosted glass</summary>
+      <description>Applies frosted glass blur shader to the notification/calendar menu.</description>
+    </key>
+    <key name="frosted-dash" type="b">
+      <default>true</default>
+      <summary>Enable native overview dash frosted glass</summary>
+      <description>Applies frosted glass blur shader to the native overview dash.</description>
+    </key>
+    <key name="frosted-overview" type="b">
+      <default>true</default>
+      <summary>Enable overview frosted glass</summary>
+      <description>Applies frosted glass wallpaper blur shader to the overview background.</description>
+    </key>
+    <key name="frosted-menus" type="b">
+      <default>true</default>
+      <summary>Enable popup menus frosted glass</summary>
+      <description>Applies frosted glass blur shader to all popup and context menus.</description>
+    </key>
+    <key name="frosted-dialogs" type="b">
+      <default>true</default>
+      <summary>Enable modal dialogs and popups frosted glass</summary>
+      <description>Applies frosted glass blur shader to modal dialogs, run dialog, and switcher popups.</description>
+    </key>
+    <key name="frosted-appfolders" type="b">
+      <default>true</default>
+      <summary>Enable app folders frosted glass</summary>
+      <description>Applies frosted glass blur shader to app folder dialogs in the overview.</description>
+    </key>
+    <key name="liquid-glass-dock" type="b">
+      <default>true</default>
+      <summary>Enable Liquid Glass shader for Dash to Dock</summary>
+      <description>Applies physical Snell refraction, chromatic dispersion, and specular rim lighting to Dash to Dock.</description>
+    </key>
+    <key name="theme-mode" type="s">
+      <choices>
+        <choice value="auto"/>
+        <choice value="dark"/>
+        <choice value="light"/>
+      </choices>
+      <default>'auto'</default>
+      <summary>Theme variant mode</summary>
+      <description>Auto follows desktop dark/light mode preference, or forces dark/light.</description>
+    </key>
+  </schema>
+</schemalist>

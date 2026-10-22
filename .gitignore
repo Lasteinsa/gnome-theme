@@ -1,0 +1,20 @@
+# Compiled CSS & Schemas
+stylesheet*.css
+schemas/gschemas.compiled
+
+# Package archives
+*.zip
+*.tar.gz
+
+# Build & runtime artifacts
+build_id.txt
+build_*/
+*.log
+
+# Editor & OS temporary files
+*~
+*.swp
+*.swo
+.DS_Store
+.directory
+Thumbs.db

@@ -1,0 +1,196 @@
+// Message List & Controls
+.message-list {
+  border: none !important;
+
+  &:ltr {
+    border-right: 1px solid $separator-color !important;
+    padding-right: 12px;
+    margin-right: 8px;
+  }
+
+  &:rtl {
+    border-left: 1px solid $separator-color !important;
+    padding-left: 12px;
+    margin-left: 8px;
+  }
+
+  .message-list-placeholder {
+    color: $fg-dim;
+  }
+}
+
+.message-list-controls {
+  padding: 10px 0;
+
+  .message-list-clear-button {
+    border-radius: $radius-pill;
+    padding: 6px 18px;
+    background-color: $card-bg !important;
+    color: $fg-color !important;
+    border: 1px solid $surface-border !important;
+    font-weight: 600;
+    box-shadow: none !important;
+    transition-duration: $duration-standard;
+
+    &:hover {
+      background-color: $card-hover !important;
+    }
+
+    &:active {
+      background-color: $card-active !important;
+    }
+  }
+}
+
+.message-notification-group {
+  .message-group-header {
+    padding: 4px;
+
+    .message-group-title {
+      font-weight: 700;
+      color: $fg-color;
+    }
+  }
+
+  .message-collapse-button {
+    border-radius: $radius-pill;
+    background-color: transparent !important;
+    color: $fg-dim !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background-color: $card-hover !important;
+      color: $fg-color !important;
+    }
+  }
+}
+
+// Notification Cards (Opaque card background prevents text overlapping in stacked notifications)
+.message {
+  border-radius: 16px;
+  background-color: $notification-bg !important;
+  border: 1px solid $surface-border !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+  padding: 10px 12px;
+  margin: 0;
+  margin-bottom: 8px;
+  color: $fg-color;
+  transition-duration: $duration-standard;
+
+  &:hover {
+    background-color: $notification-hover !important;
+  }
+
+  &:second-in-stack,
+  &:lower-in-stack {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .message-header {
+    .message-source-title {
+      font-weight: 700;
+      color: $fg-color;
+    }
+
+    .event-time {
+      color: $fg-dim;
+      font-size: 0.85em;
+    }
+
+    .message-expand-button,
+    .message-close-button {
+      border-radius: $radius-pill;
+      background-color: transparent !important;
+      color: $fg-dim !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      &:hover {
+        background-color: $card-hover !important;
+        color: $fg-color !important;
+      }
+    }
+  }
+
+  .message-title {
+    font-weight: 700;
+    color: $fg-color;
+  }
+
+  .message-content {
+    color: $fg-dim;
+  }
+
+  .message-actions {
+    spacing: 8px;
+    padding-top: 8px;
+
+    .button {
+      border-radius: $radius-button;
+      padding: 6px 14px;
+      font-weight: 600;
+
+      &:focus {
+        @include focus-ring($accent-color);
+      }
+
+      &.primary {
+        background-color: $accent-color;
+        color: #ffffff;
+
+        &:hover {
+          background-color: $accent-hover;
+        }
+      }
+    }
+  }
+}
+
+// Notification Banner (Popup at top of screen)
+.notification-banner {
+  min-height: 64px;
+  width: 34em;
+  border-radius: 16px;
+  margin: 4px;
+  margin-bottom: 0 !important;
+}
+
+// On-Screen Display (OSD for volume, brightness, etc.)
+.osd-window {
+  border-radius: $radius-dialog;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+  padding: 18px 24px;
+  color: $fg-color;
+
+  .osd-monitor-label {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .level {
+    height: 8px;
+    border-radius: $radius-pill;
+    background-color: $card-bg;
+    -barlevel-active-background-color: #{$accent-color};
+  }
+}
+
+// Workspace Switcher Popup
+.workspace-switcher {
+  border-radius: $radius-card;
+  background-color: $surface-bg;
+  border: 1px solid $surface-border;
+  box-shadow: $shadow;
+  padding: 8px 12px;
+
+  .ws-switcher-active-up,
+  .ws-switcher-active-down {
+    background-color: $accent-color;
+    border-radius: $radius-pill;
+  }
+}
